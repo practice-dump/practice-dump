@@ -1,0 +1,18 @@
+Pipeline is an easy way to do inference
+
+There are multiple arguments but we will cover some of them
+
+>>>generator(model="openai/whisper-large", device=0)
+So device is just a way to tell compiler where we want to store model
+If device is a positive numerical number then we are using cuda
+If it is -1 then we are using CPU
+Other possible values are "auto" which means to allow 🤗 Accelerate to automatically determine how to load and store the model weights.
+
+By default pipelines don't use batching as it might make the process slow sometimes
+>>> generator(model="openai/whisper-large", device=0, batch_size=2)
+>>> audio_filenames = [f"audio_{i}.flac" for i in range(10)]
+>>> texts = generator(audio_filenames)
+This runs the pipeline on the 10 provided audio files, but it will pass them in batches of 2 to the model
+(which is on a GPU, where batching is more likely to help) without requiring any further code from you.
+
+
