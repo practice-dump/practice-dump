@@ -13,6 +13,11 @@ print(tokenizer(sequence))
 # 'token_type_ids': [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], ## Signfies whether sentence is A or B (remember BERT pretraing)
 # 'attention_mask': [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]} ## Signifies whether the token is here or this just padding
 
+## To converts tokens to string use
+tokenizer.decode([101, 1999, 1037, 4920, 1999, 1996, 2598, 2045, 2973, 1037, 7570, 10322, 4183, 1012, 102])
+## [CLS] In a hole in the ground there lived a hobbit. [SEP] 
+## [CLS] and [SEP] are special tokens which signfy start of sentence and end of type one of sentence
+
 #Loading ImageProcesser using AutoImageProcessor module
 ## For vision tasks, an image processor processes the image into the correct input format.
 
