@@ -16,3 +16,12 @@ def prepare_dataset(example): ##function to process the audio data contained in 
     example.update(processor(audio=audio["array"], text=example["text"], sampling_rate=16000))
 
     return example
+
+prepare_dataset(lj_speech[0])
+
+
+'''
+'input_values': [array([-6.6753007e-03, -7.9126023e-03, -7.1924743e-03, ...,
+          7.1743531e-03,  1.4386778e-03, -2.2044291e-05], dtype=float32)],
+ 'labels': [23,3,3,3,3,31,2] ## Changed values to just show output
+'''
