@@ -27,3 +27,10 @@ from transformers import AutoFeatureExtractor
 feature_extractor = AutoFeatureExtractor.from_pretrained(
     "ehcalabres/wav2vec2-lg-xlsr-en-speech-emotion-recognition")
 
+# Loading Processor using AutoProcessor module
+## Multimodal tasks require a processor that combines two types of preprocessing tools. For example, the LayoutLMV2 model
+##requires an image processor to handle images and a tokenizer to handle text; a processor combines both of them.
+from transformers import AutoProcessor
+
+processor = AutoProcessor.from_pretrained("microsoft/layoutlmv2-base-uncased")
+
