@@ -25,3 +25,19 @@ print(encoded_input)
                            [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
                            [1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0]])}
 '''
+
+## If we train our own tokenizer
+
+from transformers import DistilBertTokenizer
+
+my_tokenizer = DistilBertTokenizer(vocab_file="my_vocab_file.txt", do_lower_case=False, padding_side="left")
+
+
+## Loading fast tokenizer
+
+from transformers import DistilBertTokenizerFast
+
+fast_tokenizer = DistilBertTokenizerFast.from_pretrained("distilbert-base-uncased")
+
+##By default, AutoTokenizer will try to load a fast tokenizer. 
+##One can disable this behavior by setting use_fast=False in from_pretrained.
