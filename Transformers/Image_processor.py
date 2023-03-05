@@ -39,3 +39,12 @@ import matplotlib.pyplot as plt
 
 img = dataset[0]["pixel_values"]
 plt.imshow(img.permute(1, 2, 0))
+
+
+#################
+## Creating a custom image processor
+## Ensure that model and tokenizer are for same model
+from transformers import ViTImageProcessor
+
+my_vit_extractor = ViTImageProcessor(resample="PIL.Image.BOX", do_normalize=False, image_mean=[0.3, 0.3, 0.3])
+print(my_vit_extractor)
