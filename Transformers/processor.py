@@ -25,3 +25,21 @@ prepare_dataset(lj_speech[0])
           7.1743531e-03,  1.4386778e-03, -2.2044291e-05], dtype=float32)],
  'labels': [23,3,3,3,3,31,2] ## Changed values to just show output
 '''
+
+################
+## Custom Processor
+
+## Handling audio component
+from transformers import Wav2Vec2FeatureExtractor
+
+feature_extractor = Wav2Vec2FeatureExtractor(padding_value=1.0, do_normalize=True)
+
+## Handing Text component
+from transformers import Wav2Vec2CTCTokenizer
+
+tokenizer = Wav2Vec2CTCTokenizer(vocab_file="my_vocab_file.txt")
+
+## Combining the two
+from transformers import Wav2Vec2Processor
+
+processor = Wav2Vec2Processor(feature_extractor=feature_extractor, tokenizer=tokenizer)
