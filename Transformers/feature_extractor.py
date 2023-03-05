@@ -41,3 +41,12 @@ def preprocess_function(examples):
     return inputs
   
   processed_dataset = preprocess_function(dataset)
+
+
+###########
+##Custom Feature Extractor
+
+from transformers import Wav2Vec2FeatureExtractor
+
+w2v2_extractor = Wav2Vec2FeatureExtractor(sampling_rate=8000, do_normalize=False)
+print(w2v2_extractor)
