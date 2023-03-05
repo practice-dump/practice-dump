@@ -1,0 +1,16 @@
+We have models (model = DistilBertModel.from_pretrained("distilbert-base-uncased")) 
+which output hidden states, these hidden states are then passed to model heads
+
+from transformers import DistilBertForSequenceClassification
+
+model = DistilBertForSequenceClassification.from_pretrained("distilbert-base-uncased")
+
+For different task we have different model heads
+DistilBertForQuestionAnswering for QA task
+
+There are two implementations of tokenizer
+1) PreTrainedTokenizer: a Python implementation of a tokenizer.
+2) PreTrainedTokenizerFast: a tokenizer from our Rust-based 🤗 Tokenizer library. 
+2nd is faster due to Rust implementation especially during batch processing
+
+The fast tokenizer also offers additional methods like offset mapping which maps tokens to their original words or characters.
