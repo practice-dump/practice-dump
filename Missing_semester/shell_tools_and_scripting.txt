@@ -1,0 +1,15 @@
+Variable=Value correct way
+Variable = Value Incorrect way
+
+echo "Value is $Variable" : It would print variable value
+echo 'Value is $Variable' : It would print the same string (not the variable value)
+
+If I define a script.sh and define a function, 
+
+then do a source script.sh, it would register the function
+
+then do functionname argument, it would execute the function and perform the desired function
+
+$0: would give the script name
+$1-$9 : would give argument names
+$?: Will get you the error code for the previous command
