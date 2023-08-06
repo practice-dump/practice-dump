@@ -13,3 +13,9 @@ then do functionname argument, it would execute the function and perform the des
 $0: would give the script name
 $1-$9 : would give argument names
 $?: Will get you the error code for the previous command
+$_ : Last argument of previous command
+
+$@ - All the arguments
+$# - Number of arguments
+$$ - Process identification number (PID) for the current script
+!! - Entire last command, including arguments. A common pattern is to execute a command only for it to fail due to missing permissions; you can quickly re-execute the command with sudo by doing sudo !!
