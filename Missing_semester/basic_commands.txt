@@ -4,6 +4,8 @@ cd - : sends to directory you were previously in
 mv is used to rename/move file. mv source destination
 cp is used to copy file. cp source destination
 ls is used to see all files/directories present is a path
+cat is used to display contents of file
+tee is used to input text in file and also display text on terminal
 
 THere are two streams to terminal.
     Input : By default keyboard
@@ -13,3 +15,6 @@ Using <> we can change that
 > : is used as argument, which tells system where to store output. echo "Azaadi" > firstfile.txt. It would create a file named firstfile and store "Azaadi"
 < : is used as argument, which tells system where to take input from. echo < firstfile.txt would display "Azaadi" on screen
 >> : is used as argument, which works similar to > but this time we append information
+
+| is used to chain multiple commands
+first command | second command. SO the first command would be executed, the input to second command would be output of first command
