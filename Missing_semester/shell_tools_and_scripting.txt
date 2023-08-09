@@ -1,3 +1,4 @@
+In shell scripting
 Variable=Value correct way
 Variable = Value Incorrect way
 
@@ -13,9 +14,24 @@ then do functionname argument, it would execute the function and perform the des
 $0: would give the script name
 $1-$9 : would give argument names
 $?: Will get you the error code for the previous command
+0 means no error
+1 means error
+If I type false, the output of $? would always be 1 and If type true output would always be 0
 $_ : Last argument of previous command
 
 $@ - All the arguments
 $# - Number of arguments
 $$ - Process identification number (PID) for the current script
 !! - Entire last command, including arguments. A common pattern is to execute a command only for it to fail due to missing permissions; you can quickly re-execute the command with sudo by doing sudo !!
+
+|| OR operator
+
+Command1 || Command2: So if command 1 fails, it would run command2
+
+&& : And Operator
+
+Command1 && Command2: So command 2 would only run if command 1 executes
+
+; Concat operator
+It would concat multiple operators
+
