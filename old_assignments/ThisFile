@@ -1,0 +1,5 @@
+This is a file to test out python file io.
+Though you see the text here as a sequence of lines,
+internally it is just one long sequence of letters.
+The newline is recorded as a letter too.
+And at the end of the file there is an implicit EOF but that does not count.
