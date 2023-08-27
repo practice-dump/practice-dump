@@ -1,3 +1,4 @@
+## Important Sources
 This folder should contain Codes specific to Audio processing
 
 Currently learning From Hugging face Course
@@ -8,11 +9,11 @@ For more research in Digital Signal Processing one can refer the following book
 
 https://brianmcfee.net/dstbook-site/content/intro.html
 
-Audio transformers survey paper
+[Audio transformers survey paper](https://arxiv.org/abs/2303.11607)
+[Audio datasets on hub] (https://huggingface.co/blog/audio-datasets#a-tour-of-audio-datasets-on-the-hub)
 
-https://arxiv.org/abs/2303.11607
 
-# To do list
+## To do list
 - [ ] [Chunking article](https://huggingface.co/blog/asr-chunking)
 - [ ] [Whisper Article](https://openai.com/research/whisper)
 - [ ] [Whisper Model card](https://huggingface.co/openai/whisper-base#usage)
