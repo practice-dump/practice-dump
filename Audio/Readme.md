@@ -22,3 +22,4 @@ https://brianmcfee.net/dstbook-site/content/intro.html
 ## Course Specific list
 - [x] [Chapter 2 Exercise](https://huggingface.co/learn/audio-course/chapter2/hands_on)
 - [ ] [Chapter 4 Exercise](https://huggingface.co/learn/audio-course/chapter4/hands_on)
+- [ ] [Chapter 5 Exercise](https://huggingface.co/learn/audio-course/chapter5/hands_on)
