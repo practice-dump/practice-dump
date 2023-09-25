@@ -2,7 +2,7 @@
 - 👀 I’m interested in learning new stuff
 - 🌱 I’m currently learning ML (right now focussed on NLP)
 - 💞️ I’m looking to collaborate on interesting research ideas
-- 📫 How to reach me mail at tanmeyr@gmail.com
+- 📫 Reach me mail at tanmeyr@gmail.com
 - This is just my storage for any code which I found useful and can be reused my other projects, so consider this as just a dump of code
 
 <!---
