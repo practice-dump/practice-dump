@@ -1,0 +1,8 @@
+N Billion parameters
+Loading in 16Bit configuration
+16 Bit = 2 Bytes
+
+So 2*N GB GPU required for loading model
+
+Because Billion has 9 Zeroes
+1GB has 10^9 Bytes
