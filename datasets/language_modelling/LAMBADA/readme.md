@@ -5,6 +5,8 @@ The LAMBADA dataset is extracted from BookCorpus and consists of 10022 passages,
 P.S When it was released in 2016: We show that LAMBADA exemplifies a wide range of linguistic phenomena, and that none of several state-of-the-art language models reaches accuracy above 1% on this novel benchmark.
 We thus propose LAMBADA as a challenging test set, meant to encourage the development of new models capable of genuine understanding of broad context in natural language text.
 
+Evaluation metric : **Accuracy**
+
 Important links
 
 * [Research PPR](https://arxiv.org/pdf/1606.06031.pdf)
