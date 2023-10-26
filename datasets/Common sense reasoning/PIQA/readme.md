@@ -2,6 +2,8 @@ Questions requiring this kind of physical commonsense pose a challenge to today'
 
 The underlying task is formualted as multiple choice question answering: given a question q and two possible solutions s1, s2, a model or a human must choose the most appropriate solution, of which exactly one is correct.
 
+Evaluation metric : **Accuracy**
+
 Important Links
 * [Research PPR](https://arxiv.org/pdf/1911.11641.pdf)
 * [Hugging face](https://huggingface.co/datasets/piqa)
