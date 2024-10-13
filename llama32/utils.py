@@ -241,3 +241,77 @@ def llamaguard3(prompt, debug=False):
   if debug:
     print(res)
   return res['choices'][0]['text']
+
+
+def trending_songs(country_name, top_number):
+  try:
+      top_number = int(top_number)
+  except Exception:
+      country_name, top_number = top_number, int(country_name)
+     
+  songs = {
+        "US": [
+            "Blinding Lights - The Weeknd",
+            "Levitating - Dua Lipa",
+            "Peaches - Justin Bieber",
+            "Save Your Tears - The Weeknd",
+            "Good 4 U - Olivia Rodrigo",
+            "Montero (Call Me By Your Name) - Lil Nas X",
+            "Kiss Me More - Doja Cat",
+            "Stay - The Kid LAROI, Justin Bieber",
+            "Drivers License - Olivia Rodrigo",
+            "Butter - BTS"
+        ],
+        "France": [
+            "Dernière danse - Indila",
+            "Je te promets - Johnny Hallyday",
+            "La Vie en rose - Édith Piaf",
+            "Tout oublier - Angèle",
+            "Rien de tout ça - Amel Bent",
+            "J'ai demandé à la lune - Indochine",
+            "Bella - Maître Gims",
+            "À nos souvenirs - Tino Rossi",
+            "Le Sud - Nino Ferrer",
+            "La Nuit je mens - Alain Bashung"
+        ],
+        "Spain": [
+            "Despacito - Luis Fonsi",
+            "Bailando - Enrique Iglesias",
+            "Con altura - Rosalía, J.Balvin",
+            "Súbeme la Radio - Enrique Iglesias",
+            "Hawái - Maluma",
+            "RITMO (Bad Boys for Life) - Black Eyed Peas, J Balvin",
+            "Dákiti - Bad Bunny, Jhay Cortez",
+            "Vivir mi vida - Marc Anthony",
+            "Una vaina loca - Farruko, Sharlene",
+            "Te boté - Nio García, Casper Mágico, Ozuna"
+        ]
+    }
+
+  # Find the list of songs for the given country
+  if country_name in songs:
+    return songs[country_name][:top_number]
+
+  # If the country is not found, return an empty list
+  return []
+
+# Import necessary module
+import math
+
+def calculate_loan(loan_amount, annual_interest_rate, loan_term, down_payment):
+    monthly_interest_rate = annual_interest_rate / 12
+    loan_term_months = loan_term * 12
+    
+    # Calculate the loan amount after down payment
+    loan_amount_after_down_payment = loan_amount - down_payment
+    
+    # Calculate the monthly payment
+    monthly_payment = loan_amount_after_down_payment * (monthly_interest_rate * (1 + monthly_interest_rate) ** loan_term_months) / ((1 + monthly_interest_rate) ** loan_term_months - 1)
+    
+    # Calculate the total payment
+    total_payment = monthly_payment * loan_term_months
+    
+    # Calculate the total interest paid
+    total_interest_paid = total_payment - loan_amount_after_down_payment
+    return math.floor(monthly_payment), math.floor(total_payment), math.floor(total_interest_paid)
+
