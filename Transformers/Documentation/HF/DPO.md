@@ -14,6 +14,13 @@ The core innovation of DPO lies in **its direct optimization approach**. Rather 
 
 One can find a collection of DPO datasets on Hugging Face [here](https://huggingface.co/collections/argilla/preference-datasets-for-dpo-656f0ce6a00ad2dc33069478).
 
+The first step is to train an SFT model, to ensure the data we train on is in-distribution for the DPO algorithm.
+
+Then, fine-tuning a language model via DPO consists of two steps and is easier than PPO:
+
+1) Data collection: Gather a preference dataset with positive and negative selected pairs of generation, given a prompt.
+2) Optimization: Maximize the log-likelihood of the DPO loss directly.
+
 ## Implementation with TRL
 
 The Transformers Reinforcement Learning (TRL) library makes implementing DPO straightforward. The `DPOConfig` and `DPOTrainer` classes follow the same `transformers` style API.
