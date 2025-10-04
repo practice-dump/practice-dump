@@ -21,7 +21,7 @@ result = model.invoke(prompt)
 print(result.content)
 
 ####### loading the prompt from a different file
-template = load_prompt('template.json')
+template = load_prompt('supplementary_files/template.json')
 
 
 
