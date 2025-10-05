@@ -18,7 +18,7 @@ schema = [
     ResponseSchema(name='fact_2', description='Fact 2 about the topic'),
     ResponseSchema(name='fact_3', description='Fact 3 about the topic'),
 ]
-
+##### the issue with structured output parser is although it enforces schema but there is no data validation available
 parser = StructuredOutputParser.from_response_schemas(schema)
 
 template = PromptTemplate(
